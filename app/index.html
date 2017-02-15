@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Main Page</title>
+    <title>Welcome</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,13 +22,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
   </head>
   <body>
-    <div class="wrapper">
-      <div class="welcome">
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium repudiandae, debitis harum veniam rerum eligendi beatae veritatis odio dolorem iure ipsa, deleniti qui, voluptatibus porro magnam unde quod! Architecto, official.</p>
-        <svg class="icon icon-hamburger ">
-          <use xlink:href="img/svg/sprite.svg#hamburger"></use>
-        </svg>
-      </div>
+    <div class="welcome">
+      <div class="welcome__card">
+        <div class="welcome__image"><img src="img/fashmark.jpg" alt=""></div>
+        <h1 class="welcome__title">Владимир Астахов</h1>
+        <p class="welcome__subtitle">Личный сайт веб разработчика</p>
+        <ul class="social welcome__socials">
+          <li class="social__item"><a class="social__link" href="#">
+              <svg class="icon icon-vk ">
+                <use xlink:href="img/svg/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="social__item"><a class="social__link" href="#">
+              <svg class="icon icon-github ">
+                <use xlink:href="img/svg/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="social__item"><a class="social__link" href="#">
+              <svg class="icon icon-in ">
+                <use xlink:href="img/svg/sprite.svg#in"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="welcome__menu">
+          <li class="welcome__menu-item"><a class="welcome__menu-link" href="#">Мои работы</a></li>
+          <li class="welcome__menu-item"><a class="welcome__menu-link" href="#">Обо мне</a></li>
+          <li class="welcome__menu-item"><a class="welcome__menu-link" href="#">Блог</a></li>
+        </ul>
+      </div><a class="btn btn--tr welcome__button" href="#">Авторизоваться</a>
       <div class="hidden"></div>
     </div>
   </body>

@@ -1,0 +1,63 @@
+.welcome
+  height: 100vh
+  background-image: url('../img/water.jpg')
+  background-size: cover
+  position: relative
+
+  &__card
+    position: absolute
+    overflow: hidden
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 5px
+    background-color: rgba(18, 38, 32, 0.6)
+    width: 380px
+    text-align: center
+    padding-top: rem(40px)
+
+  &__image
+    +size(141px)
+    overflow: hidden
+    border-radius: 50%
+    display: inline-block
+    img
+      width: 100%
+      height: auto
+
+  &__title
+    color: #fff
+    font-family: 'robotoMedium'
+    font-weight: 500
+    margin: rem(5px) 0 rem(1px)
+
+  &__subtitle
+    color: rgba(255, 255, 255, 0.55)
+    font-weight: 400
+    margin-bottom: rem(35px)
+
+  &__socials
+    margin-bottom: rem(33px)
+
+  &__menu
+    display: flex
+    justify-content: space-between
+  &__menu-item
+    flex-basis: 33.333%
+    border-right: 2px solid rgba(222, 227, 231, 0.7)
+    &:last-child
+      border-right: none 0
+  &__menu-link
+    display: block
+    background-color: $accent2
+    transition: all .1s ease-out
+    color: rgba(255, 255, 255, 0.55)
+    font-weight: 500
+    line-height: rem(44px)
+    &:hover
+      background-color: $accent
+
+  &__button
+    position: absolute
+    top: rem(24px)
+    right: 5%

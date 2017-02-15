@@ -30,14 +30,17 @@ html
 	font-size: 16px
 *, *::before, *::after
 	box-sizing: inherit
+html, body
+	margin: 0
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
 	font-family: 'sansus'
   color: $text-color
+	line-height: 1.214
 
 h1
-  font-size: 40px
+  font-size: 1.75rem
 
 .small, small
   font-size: 10px
@@ -61,6 +64,16 @@ hr
   clear: both
   margin: 10px 0 30px
   height: 0
+ul, li
+	margin: 0
+	padding: 0
+li
+	list-style-type: none
+
+a
+	text-decoration: none
+a:active
+	text-decoration: none
 
 body
 	font-size: 16px
