@@ -1,2 +1,31 @@
-header
-  h1 Hello!
+header.main-header
+  .top-line
+    ul.social.top-line__socials
+      li.social__item
+        a(href="#").social__link
+          +icon('vk')
+      li.social__item
+        a(href="#").social__link
+          +icon('github')
+      li.social__item
+        a(href="#").social__link
+          +icon('in')
+          
+    a(href="#").top-line__toggle-menu
+      +icon('hamburger')
+    
+
+  .header-card
+    .header-card__image
+      img(src="img/fashmark.jpg", alt="")
+    h1.header-card__title Владимир Астахов
+    p.header-card__subtitle Личный сайт веб разработчика
+  img(src="img/svg/bg.svg", alt="").main-header__bg
+  a(href="#").main-header__more
+    +icon('arrow_down')
+
+.main-menu
+  ul.main-menu__list
+    each val in ['Мои работы', 'Блог', 'Обо мне', 'Авторизация']
+      li.main-menu__item
+        a(href="#").main-menu__link= val

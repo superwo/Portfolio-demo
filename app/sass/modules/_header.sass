@@ -1,0 +1,113 @@
+.main-header
+  padding: rem(30px)
+  height: 100vh
+  background-image: url('../img/water.jpg')
+  background-size: cover
+  background-position: left bottom
+  position: relative
+
+  &__more
+    position: absolute
+    bottom: rem(70px)
+    left: 50%
+    transform: translateX(-50%)
+    svg
+      font-size: 1rem
+      fill: rgba(255, 255, 255, 0.55)
+      transition: all .2s ease-out
+    &:hover
+      svg
+        fill: #fff
+
+  &__bg
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    transform: translateY(50%)
+
+
+.top-line
+  +clearfix
+  &__toggle-menu
+    float: right
+    svg
+      font-size: 2rem
+      fill: #fff
+  &__socials
+    float: left
+    svg
+      fill: #fff
+
+.header-card
+  position: absolute
+  overflow: hidden
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  &__image
+    +size(141px)
+    overflow: hidden
+    border-radius: 50%
+    display: inline-block
+    img
+      width: 100%
+      height: auto
+
+  &__title
+    color: #fff
+    font-family: 'robotoMedium'
+    font-weight: 500
+    margin: rem(5px) 0 rem(1px)
+
+  &__subtitle
+    color: rgba(255, 255, 255, 0.55)
+    font-weight: 400
+    margin-bottom: rem(35px)
+
+.main-menu
+  padding-top: 5%
+  position: absolute
+  display: none
+  top: 0
+  left: 0
+  bottom: 0
+  width: 100%
+  text-align: center
+  line-height: 2
+
+  &::before, &::after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 50%
+    top: 0
+    left: 0
+    background-color: rgba($accent2, .9)
+  &::after
+    left: 50%
+    right: 0
+
+
+  &__link
+    font-family: 'sansus', sans-serif
+    color: rgba(#fff, 0.8)
+    font-size: 4rem
+    text-transform: uppercase
+    position: relative
+    z-index: 10
+
+    &::after
+      content: ''
+      position: absolute
+      width: 90px
+      height: 3px
+      background-color: rgba(#fff, 0.8)
+      bottom: -20px
+      left: calc(50% - 45px)
+      transform: scaleX(0)
+      transition: transform .2s ease-out
+    &:hover
+      &::after
+        transform: scaleX(1)
