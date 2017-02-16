@@ -1,0 +1,81 @@
+.works-section
+  position: relative
+
+.works
+  +clearfix
+  height: 100vh
+  position: relative
+  text-align: center
+
+  &__list
+    background-color: #ebefe2
+    float: left
+    width: 50%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__image
+    position: absolute
+    width: 50%
+    height: 75%
+    top: 0
+    left: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      max-height: 80%
+
+  &__title
+    margin-bottom: 45px
+
+  &__subtitle
+    color: $accent2
+    text-transform: uppercase
+
+  &__button
+    margin-top: 50px
+
+  &__navigation
+    background-color: #e1e4d7
+    float: right
+    width: 50%
+    height: 100%
+    display: flex
+    align-items: flex-end
+    &-link
+      width: 50%
+      height: 25%
+      display: block
+      flex: 1
+      position: relative
+      transition: opacity .2s ease-out
+      &:hover
+        opacity: 0.7
+      &::after
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        content: ''
+        background-color: rgba(#b0b7aa, .7)
+
+      svg
+        position: absolute
+        font-size: 1.675rem
+        fill: #fff
+        z-index: 10
+        box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.16)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+      img
+        max-height: 100%
+
+    &-link:last-child
+      &::after
+        background-color: rgba(#93998d, .7)

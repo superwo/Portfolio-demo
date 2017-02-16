@@ -1,0 +1,28 @@
+.section-header
+  font-size: 2.75rem
+  text-align: center
+  text-transform: uppercase
+  padding: rem(46px) 0 rem(54px)
+  position: relative
+
+  &__image
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__title
+    margin: 0
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      width: 90px
+      height: 3px
+      bottom: -25%
+      left: 50%
+      transform: translateX(-50%)
+      background-color: #373e42
+
+  &--works
+    background-color: $bg-color

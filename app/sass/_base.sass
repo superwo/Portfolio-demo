@@ -34,18 +34,29 @@ html, body
 	margin: 0
 	padding: 0
 
-.gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
+	color: #373e42
 	font-family: 'sansus'
-  color: $text-color
 	line-height: 1.214
 
 h1
   font-size: 1.75rem
 
-.small, small
-  font-size: 10px
-  line-height: 1.2
+h3
+	font-size: 2.2rem
+	text-transform: uppercase
+	color: #566358
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		width: 90px
+		height: 3px
+		bottom: -30%
+		left: 50%
+		transform: translateX(-50%)
+		background-color: #566358
+
 
 
 // Basic Text Style
@@ -90,6 +101,7 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
 
 // .hidden
 //   display: none

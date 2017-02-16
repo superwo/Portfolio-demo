@@ -1,0 +1,24 @@
+section.works-section
+  .section-header.section-header--works
+    img(src="img/svg/works_header.svg", alt="Section Header").section-header__image
+    h2.section-header__title Мои работы
+  
+  .works
+    ul.works__list
+      li.works__item
+        .works__image
+          img(src="img/works/work-1.png", alt="Work1")
+        .works__description
+          h3.works__title Сайт школы онлайн Образования
+          .works__subtitle HTML, CSS, JAVASCRIPT
+          a(href="#").btn.works__button
+            +icon('link')
+            | Посмотреть сайт
+    .works__navigation
+      a(href="#").works__navigation-link
+        img(src="img/works/work-2.png", alt="work2")
+        +icon('portf_arrow_down')
+      a(href="#").works__navigation-link
+        img(src="img/works/work-3.png", alt="work3")
+        +icon('portf_arrow_up')
+  
