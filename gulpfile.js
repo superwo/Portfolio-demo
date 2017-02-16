@@ -7,6 +7,7 @@ require('./gulp/tasks/svg');
 require('./gulp/tasks/modernizr');
 require('./gulp/tasks/build');
 require('./gulp/tasks/deploy');
+require('./gulp/tasks/smartgrid');
 
 
 var gulp = require('gulp');
