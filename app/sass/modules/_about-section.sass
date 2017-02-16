@@ -1,0 +1,33 @@
+.about-section
+  background-color: #f4f5f0
+  background-image: url(../img/about-bg.jpg)
+  background-size: cover
+  min-height: 100vh
+
+.reviews
+  +row-flex()
+  +justify-content(center)
+
+  &__item
+    +col()
+    +col-3()
+    font-style: italic
+
+  &__image
+    +size(80px)
+    border-radius: 50%
+    overflow: hidden
+    margin: 0 auto rem(12px)
+    img
+      max-width: 100%
+
+  &__text
+    color: rgba(#5d5a55, 0.7)
+    margin-bottom: rem(30px)
+
+  &__author
+    color: $accent
+    text-align: center
+    &-desc
+      font-weight: 500
+      text-align: center
