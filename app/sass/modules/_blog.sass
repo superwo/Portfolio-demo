@@ -1,0 +1,65 @@
+.blog
+  padding-bottom: rem(250px)
+  padding-top: rem(70px)
+  min-height: 100vh
+  background-color: #faf8f0
+  +row-flex()
+
+  &__menu
+    +col()
+    +col-2()
+    +offset-right(1)
+    text-align: right
+
+    &-item
+      margin-bottom: rem(23px)
+      &.active
+        position: relative
+        display: inline-block
+        &::after
+          position: absolute
+          content: ''
+          right: -20px
+          top: 50%
+          transform: translateY(-50%)
+          vertical-align: middle
+          width: 3px
+          height: 42px
+          background-color: $accent
+        .blog__menu-link
+          color: $accent
+
+    &-link
+      color: $text-color
+      &:hover
+        color: $accent
+
+  &__content
+    +col()
+    +col-7()
+
+  &__article
+    position: relative
+    margin-bottom: rem(140px)
+    &-title
+      font-size: 2.2rem
+      line-height: 1
+      margin: 0 0 rem(28px)
+      color: $text-color
+    &-date
+      color: $accent2
+      margin-bottom: rem(8px)
+
+    &:last-child
+      margin-bottom: rem(70px)
+      &::after
+        height: 0px
+
+    &::after
+      content: ''
+      position: absolute
+      background-color: rgba(55, 62, 66, 0.07)
+      height: 5px
+      left: 0
+      bottom: rem(-70px)
+      width: 70%

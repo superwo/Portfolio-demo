@@ -1,2 +1,26 @@
-footer
-  p footer
+footer.main-footer
+  .main-footer__top
+    .main-footer__about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+    .main-footer__menu
+      ul.main-footer__menu-list
+        li.main-footer__menu-item
+          a(href="works.html") Мои работы
+        li.main-footer__menu-item
+          a(href="about.html") Обо мне
+        li.main-footer__menu-item
+          a(href="blog.html") Блог
+        li.main-footer__menu-item
+          a(href="/") Авторизация
+      ul.social
+        li.social__item
+          a(href="#").social__link
+            +icon('vk')
+        li.social__item
+          a(href="#").social__link
+            +icon('github')
+        li.social__item
+          a(href="#").social__link
+            +icon('in')
+    .main-footer__cite
+      p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. <i>— Martin Golding</i>
+  .main-footer__bottom &copy; Владимир Астахов | Создано с любовью в LoftSchool | 2016

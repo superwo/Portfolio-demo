@@ -4,17 +4,37 @@
   background-size: cover
   position: relative
 
-  &__card
+  &__button
     position: absolute
-    overflow: hidden
+    top: rem(24px)
+    right: 5%
+
+.card
+  overflow: hidden
+  border-radius: 5px
+  background-color: rgba(18, 38, 32, 0.6)
+  text-align: center
+  padding-top: rem(40px)
+
+  &--welcome
+    position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    border-radius: 5px
-    background-color: rgba(18, 38, 32, 0.6)
     width: 380px
-    text-align: center
-    padding-top: rem(40px)
+
+  &--about
+    +col()
+    +col-3()
+    background-color: rgba(218, 219, 214, .8)
+    margin-top: rem(65px)
+
+    h3
+      margin-top: 0
+      margin-bottom: rem(65px)
+
+    .card__menu-item
+      flex-basis: 51%
 
   &__image
     +size(141px)
@@ -57,7 +77,19 @@
     &:hover
       background-color: $accent
 
-  &__button
-    position: absolute
-    top: rem(24px)
-    right: 5%
+.about-form
+  +row-flex()
+  +justify-content(center)
+
+.contact-form
+  input, textarea
+    border-radius: 20px
+    padding: rem(12px) rem(20px)
+    border: none 0
+    background-color: rgba(#fff, 0.8)
+    display: block
+    width: 90%
+    color: rgba(93, 90, 85, 0.5)
+    margin: 0 auto rem(18px)
+  textarea
+    resize: none

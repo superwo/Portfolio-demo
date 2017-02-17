@@ -4,12 +4,12 @@ block title
   title Welcome
   
 prepend content
-  .welcome__card
-    .welcome__image
+  .card.card--welcome
+    .card__image
       img(src="img/fashmark.jpg", alt="")
-    h1.welcome__title Владимир Астахов
-    p.welcome__subtitle Личный сайт веб разработчика
-    ul.social.welcome__socials
+    h1.card__title Владимир Астахов
+    p.card__subtitle Личный сайт веб разработчика
+    ul.social.card__socials
       li.social__item
         a(href="#").social__link
           +icon('vk')
@@ -19,11 +19,11 @@ prepend content
       li.social__item
         a(href="#").social__link
           +icon('in')
-    ul.welcome__menu
-      li.welcome__menu-item
-        a(href="works.html").welcome__menu-link Мои работы
-      li.welcome__menu-item
-        a(href="#").welcome__menu-link Обо мне
-      li.welcome__menu-item
-        a(href="#").welcome__menu-link Блог
+    ul.card__menu
+      li.card__menu-item
+        a(href="works.html").card__menu-link Мои работы
+      li.card__menu-item
+        a(href="about.html").card__menu-link Обо мне
+      li.card__menu-item
+        a(href="blog.html").card__menu-link Блог
   a(href="#").btn.btn--tr.welcome__button Авторизоваться

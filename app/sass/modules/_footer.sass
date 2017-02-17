@@ -1,0 +1,65 @@
+.main-footer
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+
+  &__top
+    background-color: rgba(55, 62, 66, .85)
+    color: rgba(255, 255, 255, 0.5)
+    display: flex
+    padding: rem(30px) rem(30px) rem(15px)
+
+  &__about
+    flex: 1
+    position: relative
+    &::after
+      background-color: rgba(255, 255, 255, 0.2)
+      content: ''
+      position: absolute
+      top: 0
+      width: 1px
+      height: 87px
+      right: 0
+
+
+  &__menu
+    flex: 1
+    position: relative
+    padding-left: rem(30px)
+    padding-right: rem(30px)
+
+    &-list
+      display: flex
+      margin-bottom: rem(20px)
+    &-item
+      margin-right: rem(40px)
+      a
+        color: rgba(255, 255, 255, 0.85)
+        &:hover
+          color: $accent2
+
+    &::after
+      background-color: rgba(255, 255, 255, 0.2)
+      content: ''
+      position: absolute
+      top: 0
+      width: 1px
+      height: 87px
+      right: 0
+
+
+  &__cite
+    flex: 1
+    padding-left: rem(30px)
+    font-style: italic
+    color: rgba(255, 255, 255, 0.3)
+    i
+      display: block
+      font-weight: 800
+
+  &__bottom
+    background-color: rgba(108, 156, 90, 0.85)
+    line-height: rem(38px)
+    text-align: center
+    color: rgba(255, 255, 255, 0.5)
