@@ -5,6 +5,8 @@
   background-size: cover
   min-height: 100vh
   padding-bottom: rem(340px)
+  padding-left: rem(15px)
+  padding-right: rem(15px)
 
 .reviews
   +row-flex()
@@ -14,6 +16,9 @@
     +col()
     +col-3()
     font-style: italic
+    +col-md-4()
+    +col-sm-6()
+    +col-xs-12()
 
   &__image
     +size(80px)

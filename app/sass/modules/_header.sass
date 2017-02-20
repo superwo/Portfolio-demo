@@ -32,6 +32,8 @@
   +clearfix
   &__toggle-menu
     float: right
+    z-index: 40
+    position: relative
     svg
       font-size: 2rem
       fill: #fff
@@ -77,6 +79,9 @@
   width: 100%
   text-align: center
   line-height: 2
+  z-index: 30
+  +phones-max
+    padding-top: 30%
 
   &::before, &::after
     content: ''
@@ -86,9 +91,12 @@
     top: 0
     left: 0
     background-color: rgba($accent2, .9)
+    transition: all 200ms ease-out
+  &::before
+    transform: translateX(-100%)
   &::after
     left: 50%
-    right: 0
+    transform: translateX(100%)
 
 
   &__link
@@ -98,6 +106,8 @@
     text-transform: uppercase
     position: relative
     z-index: 10
+    +phones-max
+      font-size: 2rem
 
     &::after
       content: ''
@@ -112,3 +122,9 @@
     &:hover
       &::after
         transform: scaleX(1)
+
+  &--active
+    display: block
+    &::after, &::before
+      transform: translateX(0%)
+      transition: all 200ms ease-out

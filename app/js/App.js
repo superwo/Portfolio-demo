@@ -63,63 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(2);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var TestModule = function () {
-  function TestModule() {
-    _classCallCheck(this, TestModule);
-
-    // cache elements from page
-    this.titles = (0, _jquery2.default)('h1');
-
-    this.events();
-  }
-
-  _createClass(TestModule, [{
-    key: 'events',
-    value: function events() {
-      this.titles.on('click', this.logSomething);
-    }
-
-    // custom functions
-
-  }, {
-    key: 'logSomething',
-    value: function logSomething() {
-      console.log("You clicked me!");
-    }
-  }]);
-
-  return TestModule;
-}();
-
-exports.default = TestModule;
-
-/***/ }),
-/* 2 */
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10346,19 +10294,128 @@ return jQuery;
 
 
 /***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TestModule = function () {
+  function TestModule() {
+    _classCallCheck(this, TestModule);
+
+    // cache elements from page
+    this.titles = (0, _jquery2.default)('h1');
+
+    this.events();
+  }
+
+  _createClass(TestModule, [{
+    key: 'events',
+    value: function events() {
+      this.titles.on('click', this.logSomething);
+    }
+
+    // custom functions
+
+  }, {
+    key: 'logSomething',
+    value: function logSomething() {
+      console.log("You clicked me!");
+    }
+  }]);
+
+  return TestModule;
+}();
+
+exports.default = TestModule;
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _TestModule = __webpack_require__(1);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ToggleMenu = function () {
+  function ToggleMenu() {
+    _classCallCheck(this, ToggleMenu);
+
+    // cache elements from page
+    this.btn = (0, _jquery2.default)('.top-line__toggle-menu');
+    this.mainMenu = (0, _jquery2.default)('.main-menu');
+
+    this.events();
+  }
+
+  _createClass(ToggleMenu, [{
+    key: 'events',
+    value: function events() {
+      this.btn.on('click', this.toggleMenu.bind(this));
+    }
+
+    // custom functions
+
+  }, {
+    key: 'toggleMenu',
+    value: function toggleMenu() {
+      this.mainMenu.toggleClass('main-menu--active');
+    }
+  }]);
+
+  return ToggleMenu;
+}();
+
+exports.default = ToggleMenu;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _TestModule = __webpack_require__(2);
 
 var _TestModule2 = _interopRequireDefault(_TestModule);
+
+var _ToggleMenu = __webpack_require__(3);
+
+var _ToggleMenu2 = _interopRequireDefault(_ToggleMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var testModule = new _TestModule2.default();
+var toggleMenu = new _ToggleMenu2.default();
 
 /***/ })
 /******/ ]);

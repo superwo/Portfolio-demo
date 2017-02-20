@@ -8,6 +8,20 @@
     position: absolute
     top: rem(24px)
     right: 5%
+    +phones-max
+      right: 50%
+      transform: translateX(50%)
+
+  &__copyright
+    color: rgba(255, 255, 255, 0.8)
+    position: absolute
+    bottom: rem(28px)
+    left: 50%
+    transform: translateX(-50%)
+    +phones-max
+      left: 15px
+      transform: translateX(0)
+      font-size: 0.8rem
 
 .card
   overflow: hidden
@@ -22,10 +36,16 @@
     left: 50%
     transform: translate(-50%, -50%)
     width: 380px
+    +phones-max
+      width: 300px
 
   &--about
     +col()
     +col-3()
+    +col-lg-4()
+    +col-md-5()
+    +col-sm-8()
+    +col-xs-12()
     background-color: rgba(218, 219, 214, .8)
     margin-top: rem(65px)
 
@@ -41,23 +61,32 @@
     overflow: hidden
     border-radius: 50%
     display: inline-block
+
     img
       width: 100%
       height: auto
+    +phones-max
+      +size(100px)
 
   &__title
     color: #fff
     font-family: 'robotoMedium'
     font-weight: 500
     margin: rem(5px) 0 rem(1px)
+    +phones-max
+      font-size: 1.5rem
 
   &__subtitle
     color: rgba(255, 255, 255, 0.55)
     font-weight: 400
     margin-bottom: rem(35px)
+    +phones-max
+      margin-bottom: 1rem
 
   &__socials
     margin-bottom: rem(33px)
+    +phones-max
+      margin-bottom: 1rem
 
   &__menu
     display: flex

@@ -9,7 +9,7 @@ section.works-section
         .works__image
           img(src="img/works/work-1.png", alt="Work1")
         .works__description
-          h3.works__title Сайт школы онлайн Образования
+          h3.works__title Сайт школы онлайн <br> Образования
           .works__subtitle HTML, CSS, JAVASCRIPT
           a(href="#").btn.works__button
             +icon('link')
@@ -17,8 +17,10 @@ section.works-section
     .works__navigation
       a(href="#").works__navigation-link
         img(src="img/works/work-2.png", alt="work2")
-        +icon('portf_arrow_down')
+        .works__navigation-icon
+          +icon('portf_arrow_down')
       a(href="#").works__navigation-link
         img(src="img/works/work-3.png", alt="work3")
-        +icon('portf_arrow_up')
+        .works__navigation-icon
+          +icon('portf_arrow_up')
   
