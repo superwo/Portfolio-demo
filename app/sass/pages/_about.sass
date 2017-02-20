@@ -1,0 +1,77 @@
+.me
+  padding-bottom: rem(13px)
+  padding-top: rem(13px)
+  +row-flex()
+  background-color: #FBF8F1
+
+  &__left
+    +col()
+    +col-6()
+    +clearfix
+
+  .section-header
+    width: 50%
+    float: left
+    background-image: url(../img/svg/about_header.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+    &__title
+      font-size: rem(63px)
+
+  &__info
+    text-align: center
+    z-index: 1
+    width: 50%
+    float: right
+
+    &-image
+      max-width: 100%
+    p
+      text-align: left
+
+  &__right
+    +col()
+    +col-6()
+
+  &__info-title
+    text-align: center
+    margin-top: 0
+
+section.contacts
+  height: calc(100vh + 180px)
+  +row-flex()
+  +justify-content(center)
+  +align-items(center)
+  background-image: url(../img/map.jpg)
+  background-size: cover
+
+  .card--contacts
+    transform: translateY(-50%)
+    +col()
+    +col-3()
+    background-color: rgba(244, 245, 240, 0.9)
+    padding: rem(35px) rem(40px)
+    h3
+      margin-top: 0
+    a
+      font-family: 'robotoMedium'
+      color: #566358
+      display: block
+      text-align: left
+      margin-bottom: rem(12px)
+      margin-left: rem(35px)
+      position: relative
+      .icon
+        font-size: 1.1rem
+        fill: $accent2
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: -35px
+        transition: all .2s ease-out
+      &:hover
+        color: $accent
+        .icon
+          fill: $accent

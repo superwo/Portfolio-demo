@@ -4,4 +4,57 @@ block title
   title About Page
   
 prepend content
-  .page About Me
+  .page
+    section.me
+      .me__left
+        .section-header
+          h2.section-header__title Обо мне
+        .me__info
+          img(src="img/fashmark.jpg", alt="me").me__info-image
+          h3.me__info-title Кто я
+          p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+          p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .me__right
+        h3.me__info-title Чем я могу быть <br> вам полезен
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        ul.me__exp
+          li.me__exp-item
+            h5 Frontend
+            ul.me__exp-inlist
+              li html5
+              li css3
+              li javascript & jquery
+          li.me__exp-item
+            h5 Backend
+            ul.me__exp-inlist
+              li php
+              li mySQL
+              li Node.js & npm
+              li Mongo.db
+          li.me__exp-item
+            h5 WorkFlow
+            ul.me__exp-inlist
+              li Git
+              li Gulp
+              li Bower
+      
+    section.contacts
+      .card.card--contacts
+        h3 Контакты
+        ul.card__contacts
+          li.card__contacts-item
+            a(href="#")
+              +icon('skype')
+              | skype_kdn
+          li.card__contacts-item
+            a(href="#")
+              +icon('envelope')
+              | astahov@gmail.com
+          li.card__contacts-item
+            a(href="#")
+              +icon('phone')
+              | +7 931 200 93 24
+          li.card__contacts-item
+            a(href="#")
+              +icon('map_marker')
+              | Новосибирск, ул. Инская, д.14
