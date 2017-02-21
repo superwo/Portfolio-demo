@@ -7,7 +7,11 @@
   &__left
     +col()
     +col-6()
+    +col-md-12()
     +clearfix
+    +laptop-max
+      padding: 0 15px
+
 
   .section-header
     width: 50%
@@ -16,6 +20,9 @@
     background-repeat: no-repeat
     background-position: center center
     background-size: cover
+    +tablets-max
+      width: 100%
+      float: none
 
     &__title
       font-size: rem(63px)
@@ -25,6 +32,10 @@
     z-index: 1
     width: 50%
     float: right
+    +tablets-max
+      width: 100%
+      margin-bottom: 60px
+      float: none
 
     &-image
       max-width: 100%
@@ -34,10 +45,30 @@
   &__right
     +col()
     +col-6()
+    +col-md-12()
+    +laptop-max
+      padding: 0 15px
 
   &__info-title
     text-align: center
     margin-top: 0
+
+  &__exp
+    margin-top: rem(46px)
+    &-title
+      color: #566358
+      font-size: 1.75rem
+      font-weight: 500
+      font-family: 'robotoMedium', sans-serif
+      margin-top: 0
+      margin-bottom: rem(3px)
+
+    &-inlist
+      +clearfix
+      margin-bottom: rem(18px)
+      li
+        float: left
+        margin-right: rem(25px)
 
 section.contacts
   height: calc(100vh + 180px)
@@ -51,6 +82,11 @@ section.contacts
     transform: translateY(-50%)
     +col()
     +col-3()
+    +col-lg-4()
+    +col-md-6()
+    +col-xs-12()
+    +tablets-max
+      margin: 0 30px
     background-color: rgba(244, 245, 240, 0.9)
     padding: rem(35px) rem(40px)
     h3

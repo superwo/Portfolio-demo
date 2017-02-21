@@ -19,24 +19,34 @@ prepend content
         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         ul.me__exp
           li.me__exp-item
-            h5 Frontend
+            h5.me__exp-title Frontend
             ul.me__exp-inlist
-              li html5
-              li css3
-              li javascript & jquery
+              li
+                +circle(40, 'HTML5')
+              li
+                +circle(60, 'CSS3')
+              li
+                +circle(40, 'javascript & jquery')
           li.me__exp-item
-            h5 Backend
+            h5.me__exp-title Backend
             ul.me__exp-inlist
-              li php
-              li mySQL
-              li Node.js & npm
-              li Mongo.db
+              li
+                +circle(70, 'PHP')
+              li
+                +circle(30, 'mySQL')
+              li
+                +circle(60, 'Node.js & npm')
+              li 
+                +circle(80, 'Mongo.db')
           li.me__exp-item
-            h5 WorkFlow
+            h5.me__exp-title WorkFlow
             ul.me__exp-inlist
-              li Git
-              li Gulp
-              li Bower
+              li
+                +circle(90, 'Git')
+              li 
+                +circle(80, 'Gulp')
+              li
+                +circle(70, 'Bower')
       
     section.contacts
       .card.card--contacts
