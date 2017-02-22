@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10415,6 +10415,79 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Slideshow = function () {
+  function Slideshow() {
+    _classCallCheck(this, Slideshow);
+
+    // cache elements from page
+    this.slideshowLink = (0, _jquery2.default)('.works__navigation-link');
+    this.slideItems = (0, _jquery2.default)('.works__item');
+    this.currentSlideItem = (0, _jquery2.default)('.works__item--current');
+    this.images = (0, _jquery2.default)('.works__image img');
+
+    this.events();
+  }
+
+  _createClass(Slideshow, [{
+    key: 'events',
+    value: function events() {
+      this.slideshowLink.on('click', this.sshow.bind(this));
+      this.slideshowLink.on('click', this.changeBg.bind(this));
+    }
+
+    // custom functions
+
+  }, {
+    key: 'sshow',
+    value: function sshow(e) {
+      e.preventDefault();
+      var ind = (0, _jquery2.default)(e.currentTarget).attr('data-ind');
+      this.currentSlideItem.removeClass('works__item--current');
+      this.currentSlideItem = (0, _jquery2.default)(this.slideItems[ind]);
+      (0, _jquery2.default)(this.slideItems[ind]).fadeIn(500, function () {
+        (0, _jquery2.default)(this).addClass('works__item--current');
+        (0, _jquery2.default)(this).removeAttr('style');
+      });
+    }
+  }, {
+    key: 'changeBg',
+    value: function changeBg(e) {
+      var ind = this.slideItems.index(this.currentSlideItem);
+      var nextInd = ind + 1 >= this.slideItems.length ? 0 : ind + 1;
+      var prevInd = ind - 1 < 0 ? this.slideItems.length - 1 : ind - 1;
+      (0, _jquery2.default)(this.slideshowLink[0]).attr('data-ind', nextInd);
+      (0, _jquery2.default)(this.slideshowLink[1]).attr('data-ind', prevInd);
+      (0, _jquery2.default)(this.slideshowLink[0]).find('img').attr('src', (0, _jquery2.default)(this.images[nextInd]).attr('src'));
+      (0, _jquery2.default)(this.slideshowLink[1]).find('img').attr('src', (0, _jquery2.default)(this.images[prevInd]).attr('src'));
+    }
+  }]);
+
+  return Slideshow;
+}();
+
+exports.default = Slideshow;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var TestModule = function () {
   function TestModule() {
     _classCallCheck(this, TestModule);
@@ -10446,7 +10519,7 @@ var TestModule = function () {
 exports.default = TestModule;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10498,7 +10571,7 @@ var ToggleMenu = function () {
 exports.default = ToggleMenu;
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10508,11 +10581,11 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _TestModule = __webpack_require__(3);
+var _TestModule = __webpack_require__(4);
 
 var _TestModule2 = _interopRequireDefault(_TestModule);
 
-var _ToggleMenu = __webpack_require__(4);
+var _ToggleMenu = __webpack_require__(5);
 
 var _ToggleMenu2 = _interopRequireDefault(_ToggleMenu);
 
@@ -10520,10 +10593,15 @@ var _Preloader = __webpack_require__(2);
 
 var _Preloader2 = _interopRequireDefault(_Preloader);
 
+var _Slideshow = __webpack_require__(3);
+
+var _Slideshow2 = _interopRequireDefault(_Slideshow);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var testModule = new _TestModule2.default();
 var toggleMenu = new _ToggleMenu2.default();
+var slideshow = new _Slideshow2.default();
 
 (0, _jquery2.default)(document).ready(function () {
   var preloader = new _Preloader2.default();

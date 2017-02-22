@@ -25,6 +25,11 @@
       height: auto
       padding: rem(35px) 0
 
+  &__item
+    display: none
+    &--current
+      display: block
+
   &__image
     position: absolute
     width: 50%
@@ -76,6 +81,9 @@
         height: auto
       &:hover
         opacity: 0.7
+      &:active
+        .works__navigation-icon
+          transform: translate(-50%, -50%) scale(1)
       &::after
         position: absolute
         top: 0
@@ -99,8 +107,9 @@
       position: absolute
       top: 50%
       left: 50%
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%) scale(1.2)
       z-index: 10
+      transition: transform 200ms ease-out
 
       svg
         font-size: 1.675rem

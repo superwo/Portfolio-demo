@@ -5,21 +5,48 @@ section.works-section
   
   .works
     ul.works__list
-      li.works__item
+      li.works__item.works__item--current
         .works__image
           img(src="img/works/work-1.png", alt="Work1")
         .works__description
-          h3.works__title Сайт школы онлайн <br> Образования
+          h3.works__title Сайт школы онлайн <br> Образования 1
+          .works__subtitle HTML, CSS, JAVASCRIPT
+          a(href="#").btn.works__button
+            +icon('link')
+            | Посмотреть сайт
+      li.works__item
+        .works__image
+          img(src="img/works/work-2.png", alt="Work2")
+        .works__description
+          h3.works__title Сайт школы онлайн <br> Образования 2
+          .works__subtitle HTML, CSS, JAVASCRIPT
+          a(href="#").btn.works__button
+            +icon('link')
+            | Посмотреть сайт
+      li.works__item
+        .works__image
+          img(src="img/works/work-3.png", alt="Work3")
+        .works__description
+          h3.works__title Сайт школы онлайн <br> Образования 3
+          .works__subtitle HTML, CSS, JAVASCRIPT
+          a(href="#").btn.works__button
+            +icon('link')
+            | Посмотреть сайт
+      li.works__item
+        .works__image
+          img(src="img/works/work-4.png", alt="Work4")
+        .works__description
+          h3.works__title Сайт школы онлайн <br> Образования 3
           .works__subtitle HTML, CSS, JAVASCRIPT
           a(href="#").btn.works__button
             +icon('link')
             | Посмотреть сайт
     .works__navigation
-      a(href="#").works__navigation-link
-        img(src="img/works/work-2.png", alt="work2")
+      a(href="", data-ind="1").works__navigation-link
+        img(src="img/works/work-2.png", alt="work3")
         .works__navigation-icon
           +icon('portf_arrow_down')
-      a(href="#").works__navigation-link
+      a(href="", data-ind="2").works__navigation-link
         img(src="img/works/work-3.png", alt="work3")
         .works__navigation-icon
           +icon('portf_arrow_up')
