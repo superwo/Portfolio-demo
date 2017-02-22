@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10315,6 +10315,106 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Preloader = function () {
+  function Preloader() {
+    _classCallCheck(this, Preloader);
+
+    // cache elements from page
+    this.imgs = [];
+    this.percents = 1;
+    this.wrap = (0, _jquery2.default)('.wrapper');
+    this.loader = (0, _jquery2.default)('.loader');
+    this.loaderText = (0, _jquery2.default)('#preload-text');
+
+    this.searchAllImages();
+    this.events();
+  }
+
+  _createClass(Preloader, [{
+    key: 'events',
+    value: function events() {
+      var that = this;
+      for (var i = 0; i < that.imgs.length; i++) {
+        var image = (0, _jquery2.default)('<img>', {
+          attr: {
+            src: that.imgs[i]
+          }
+        });
+
+        image.on('load', function () {
+          that.setPercents(that.imgs.length, that.percents);
+          that.percents++;
+        });
+      }
+    }
+
+    // custom functions
+
+  }, {
+    key: 'searchAllImages',
+    value: function searchAllImages() {
+      var images = [];
+      _jquery2.default.each((0, _jquery2.default)('*'), function () {
+        var $this = (0, _jquery2.default)(this),
+            background = $this.css('background-image'),
+            img = $this.is('img');
+
+        if (background != 'none') {
+          var path = background.replace('url("', '').replace('")', '');
+
+          images.push(path);
+        }
+
+        if (img) {
+          var path = $this.attr('src');
+
+          if (path) {
+            images.push(path);
+          }
+        }
+      });
+      this.imgs = images;
+    }
+  }, {
+    key: 'setPercents',
+    value: function setPercents(total, current) {
+      var percent = Math.ceil(current / total * 100);
+
+      if (percent >= 100) {
+        this.wrap.css('display', 'block');
+        this.loader.css('display', 'none');
+      }
+
+      this.loaderText.text(percent);
+    }
+  }]);
+
+  return Preloader;
+}();
+
+exports.default = Preloader;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var TestModule = function () {
   function TestModule() {
     _classCallCheck(this, TestModule);
@@ -10346,7 +10446,7 @@ var TestModule = function () {
 exports.default = TestModule;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10398,24 +10498,36 @@ var ToggleMenu = function () {
 exports.default = ToggleMenu;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _TestModule = __webpack_require__(2);
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _TestModule = __webpack_require__(3);
 
 var _TestModule2 = _interopRequireDefault(_TestModule);
 
-var _ToggleMenu = __webpack_require__(3);
+var _ToggleMenu = __webpack_require__(4);
 
 var _ToggleMenu2 = _interopRequireDefault(_ToggleMenu);
+
+var _Preloader = __webpack_require__(2);
+
+var _Preloader2 = _interopRequireDefault(_Preloader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var testModule = new _TestModule2.default();
 var toggleMenu = new _ToggleMenu2.default();
+
+(0, _jquery2.default)(document).ready(function () {
+  var preloader = new _Preloader2.default();
+});
 
 /***/ })
 /******/ ]);

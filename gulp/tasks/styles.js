@@ -15,7 +15,7 @@ gulp.task('sass', function() {
 	}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
   .pipe(gcmq())
-	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(autoprefixer({browsers: ['> 5%'], cascade: false}))
 	.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));

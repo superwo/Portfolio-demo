@@ -31,6 +31,7 @@ html(lang='en')
     meta(name="apple-mobile-web-app-status-bar-style", content="#000")
 
   body
+    +preloader()
     .wrapper
       .maincontent
         include ../common/header.jade
@@ -38,6 +39,6 @@ html(lang='en')
         block content
           .hidden
         
-    include ../common/footer.jade
+      include ../common/footer.jade
   
   script(src='js/scripts.min.js')
