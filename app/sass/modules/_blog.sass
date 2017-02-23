@@ -10,6 +10,21 @@
     +col-2()
     +offset-right(1)
     text-align: right
+    height: 1px
+    position: relative
+    &.fixed
+      .blog__menu-list
+        position: fixed
+        top: 30px
+        width: inherit
+
+    &-list
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+
+
 
     &-item
       margin-bottom: rem(23px)
@@ -33,6 +48,8 @@
       color: $text-color
       &:hover
         color: $accent
+
+
 
   &__content
     +col()
