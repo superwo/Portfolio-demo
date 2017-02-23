@@ -8,7 +8,10 @@ import BlogScroll from './modules/BlogScroll';
 var testModule = new TestModule();
 var toggleMenu = new ToggleMenu();
 var slideshow  = new Slideshow();
-var blogScroll = new BlogScroll();
+
+if($('.blog').length) {
+  const blogScroll = new BlogScroll();
+}
 
 $(document).ready(function() {
   var preloader  = new Preloader();

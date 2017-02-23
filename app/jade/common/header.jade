@@ -26,6 +26,6 @@ header.main-header
 
 .main-menu
   ul.main-menu__list
-    each val in ['Мои работы', 'Блог', 'Обо мне', 'Авторизация']
+    each key, val in {'Мои работы': 'works.html', 'Блог': 'blog.html', 'Обо мне': 'about.html', 'Авторизация': '/'}
       li.main-menu__item
-        a(href="#").main-menu__link= val
+        a(href= key).main-menu__link= val

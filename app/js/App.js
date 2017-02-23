@@ -10330,6 +10330,7 @@ var BlogScroll = function () {
     key: 'events',
     value: function events() {
       (0, _jquery2.default)(window).on('scroll', this.makeSticky.bind(this));
+      (0, _jquery2.default)(window).on('resize', this.makeSticky.bind(this));
     }
 
     // custom functions
@@ -10666,7 +10667,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var testModule = new _TestModule2.default();
 var toggleMenu = new _ToggleMenu2.default();
 var slideshow = new _Slideshow2.default();
-var blogScroll = new _BlogScroll2.default();
+
+if ((0, _jquery2.default)('.blog').length) {
+  var blogScroll = new _BlogScroll2.default();
+}
 
 (0, _jquery2.default)(document).ready(function () {
   var preloader = new _Preloader2.default();

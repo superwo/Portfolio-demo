@@ -7,30 +7,43 @@
   &__top
     background-color: rgba(55, 62, 66, .85)
     color: rgba(255, 255, 255, 0.5)
-    display: flex
     padding: rem(30px) rem(30px) rem(15px)
+    +row-flex()
 
   &__about
-    flex: 1
     position: relative
-    &::after
-      background-color: rgba(255, 255, 255, 0.2)
-      content: ''
-      position: absolute
-      top: 0
-      width: 1px
-      height: 87px
-      right: 0
+    border-right: 1px solid rgba(255, 255, 255, 0.2)
+    padding-bottom: rem(15px)
+    margin-bottom: rem(15px)
+    +laptop-max
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      border-right: none
+      text-align: center
+    +col()
+    +col-4()
+    +col-lg-6()
+    +col-md-12()
 
 
   &__menu
-    flex: 1
     position: relative
-    padding-left: rem(30px)
-    padding-right: rem(30px)
+    white-space: nowrap
+    border-right: 1px solid rgba(255, 255, 255, 0.2)
+    padding-bottom: rem(15px)
+    margin-bottom: rem(15px)
+    text-align: center
+    +laptop-max
+      border-right: none
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    +col()
+    +col-4()
+    +col-lg-6()
+    +col-md-12()
 
     &-list
       display: flex
+      flex-wrap: wrap
+      justify-content: center
       margin-bottom: rem(20px)
     &-item
       margin-right: rem(40px)
@@ -39,21 +52,16 @@
         &:hover
           color: $accent2
 
-    &::after
-      background-color: rgba(255, 255, 255, 0.2)
-      content: ''
-      position: absolute
-      top: 0
-      width: 1px
-      height: 87px
-      right: 0
-
 
   &__cite
-    flex: 1
+    +col()
+    +col-4()
+    +col-lg-12()
     padding-left: rem(30px)
     font-style: italic
     color: rgba(255, 255, 255, 0.3)
+    +laptop-max
+      text-align: center
     i
       display: block
       font-weight: 800

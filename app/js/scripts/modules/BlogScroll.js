@@ -11,6 +11,7 @@ class BlogScroll {
 
   events() {
     $(window).on('scroll', this.makeSticky.bind(this));
+    $(window).on('resize', this.makeSticky.bind(this));
   }
 
   // custom functions
