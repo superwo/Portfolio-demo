@@ -48,6 +48,21 @@
     +col-xs-12()
     background-color: rgba(218, 219, 214, .8)
     margin-top: rem(65px)
+    position: relative
+    .card__blur--about
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-image: url(../img/about-bg.jpg)
+      background-position: center center
+      background-repeat: no-repeat
+      filter: blur(20px)
+      z-index: 1
+    .card__blur-inner--about
+      z-index: 2
+      position: relative
 
     h3
       margin-top: 0
